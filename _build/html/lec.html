@@ -1,0 +1,1293 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Lectures &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lec';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial Key Points" href="tutorials.html" />
+    <link rel="prev" title="Welcome to COMP90050" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to COMP90050
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lectures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorial Key Points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="past_exam.html">Past Exam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparisons.html">Comparisons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_site.html">Useful Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random.html">Random Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdf.html">PDFs</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flec.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/lec.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lectures</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#storage-area-networks-san">Storage Area Networks (SAN)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#communication-cost">Communication Cost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-dbms-types">Key DBMS Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acid">ACID</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#significance-of-dbms">Significance of DBMS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#module-availability">Module availability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-oriented-db-systems-oodb">Object Oriented DB Systems(OODB)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nosql">NoSQL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deductive-database-systems-ddbs">Deductive database systems (DDBS)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#database-architectures">Database Architectures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance">Performance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joins-simple-nested">Joins (simple, nested)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-optimisation">Query Optimisation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-based-optimisation">Cost-based Optimisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-ra">SQL &amp; RA</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing">Indexing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-trees">B+trees</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">6</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">B+trees</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hash">Hash</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bitmap">Bitmap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quadtree">Quadtree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-d-tree">K-d Tree</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">8</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-tree">R tree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transactions">Transactions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acid-in-transactions">ACID in Transactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codes">Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jdbc-java-database-connectivity">JDBC: Java Database Connectivity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flat-transactions">Flat Transactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-transactions">Nested Transactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transaction-management-monitors">Transaction Management: Monitors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tp-monitors">TP Monitors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tp-process-structure-i-to-iii">TP Process Structure I to III</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cc">11 - CC</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concurrency-control">Concurrency Control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaphores">Semaphores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">12</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Semaphores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deadlock">Deadlock</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isolation">Isolation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependency">Dependency</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">13</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependency-graph">Dependency Graph</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">14</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#s-and-x-lock">S and X lock</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-locking-2pl">2 Phase Locking (2PL)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strict-two-phase-locking-s2pl">Strict two-phase locking (S2PL)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#degrees-of-isolation">Degrees of Isolation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">15</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Degrees of Isolation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#granularity-of-locks">Granularity of Locks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-version-locking">Two-version Locking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-transactions-and-locking">Nested Transactions and Locking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">16</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optimistic-concurrency-control">Optimistic Concurrency Control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#snapshot-isolation">Snapshot Isolation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-stamp-based-concurrency-control">Time-stamp-based Concurrency Control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#networking-intro">Networking Intro</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">17 （学的不好</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-phase-commit">Two-phase commit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling-in-two-phase-commit">Error Handling in Two-phase commit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timestamp">Timestamp</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transactions-with-replicated-data">Transactions with replicated data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">18</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fault-tolerance">Fault Tolerance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disk-failure-rates">Disk failure rates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raid">RAID</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fault-tolerance-by-voting">Fault tolerance by voting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fault-tolerance-with-repair">Fault tolerance with repair</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supermodule">Supermodule</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">19</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recovery">Recovery</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-storage">Data Storage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buffers">Buffers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-access">Data Access</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cyclic-redundancy-check-crc">Cyclic Redundancy Check (CRC)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-recovery-systems">Types of Recovery Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checkpoints">Checkpoints</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">20 （之后学的也不好</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Checkpoints</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concurrent-transactions">Concurrent Transactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-record-buffering">Log Record Buffering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-backup-systems">Remote Backup Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shadow-paging">Shadow-paging</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">21</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-warehousing">Data Warehousing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#olap-online-analytical-processing">OLAP（OnLine Analytical Processing）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cube">Data Cube</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-tabulation-with-hierarchy">Cross Tabulation with Hierarchy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#information-retrieval-systems">Information Retrieval Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-memory-databases">In Memory Databases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">22</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-databases">Graph Databases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#columnar-databases">Columnar Databases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitation-of-classical-commercial-systems-in-the-era-of-networking">Limitation of Classical Commercial Systems in the era of Networking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cap">CAP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eventual-consistency-variations">Eventual Consistency Variations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base">BASE</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lectures">
+<h1>Lectures<a class="headerlink" href="#lectures" title="Permalink to this heading">#</a></h1>
+<section id="id1">
+<h2>3<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<section id="storage-area-networks-san">
+<h3>Storage Area Networks (SAN)<a class="headerlink" href="#storage-area-networks-san" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="communication-cost">
+<h3>Communication Cost<a class="headerlink" href="#communication-cost" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">transmit</span> <span class="n">time</span> <span class="o">=</span> <span class="n">distance</span><span class="o">/</span><span class="n">c</span> <span class="o">+</span> <span class="n">message_bits</span><span class="o">/</span><span class="n">bandwidth</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">speed</span> <span class="n">of</span> <span class="n">light</span> <span class="p">(</span><span class="mi">200</span> <span class="n">million</span> <span class="n">meters</span><span class="o">/</span><span class="n">sec</span><span class="p">)</span> <span class="k">with</span> <span class="n">fibre</span> <span class="n">optics</span>
+</pre></div>
+</div>
+</section>
+<section id="key-dbms-types">
+<h3>Key DBMS Types<a class="headerlink" href="#key-dbms-types" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="acid">
+<h3>ACID<a class="headerlink" href="#acid" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="significance-of-dbms">
+<h3>Significance of DBMS<a class="headerlink" href="#significance-of-dbms" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="module-availability">
+<h3>Module availability<a class="headerlink" href="#module-availability" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="object-oriented-db-systems-oodb">
+<h3>Object Oriented DB Systems(OODB)<a class="headerlink" href="#object-oriented-db-systems-oodb" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="nosql">
+<h3>NoSQL<a class="headerlink" href="#nosql" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="deductive-database-systems-ddbs">
+<h3>Deductive database systems (DDBS)<a class="headerlink" href="#deductive-database-systems-ddbs" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id2">
+<h2>4<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<section id="database-architectures">
+<h3>Database Architectures<a class="headerlink" href="#database-architectures" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>centralised</p></li>
+<li><p>distributed</p></li>
+<li><p>www</p></li>
+<li><p>grid</p></li>
+<li><p>p2p</p></li>
+<li><p>cloud</p></li>
+</ul>
+</section>
+<section id="performance">
+<h3>Performance<a class="headerlink" href="#performance" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="joins-simple-nested">
+<h3>Joins (simple, nested)<a class="headerlink" href="#joins-simple-nested" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="n">the</span> <span class="n">worst</span> <span class="n">case</span><span class="p">,</span> <span class="k">if</span> <span class="n">there</span> <span class="ow">is</span> <span class="n">enough</span> <span class="n">memory</span> <span class="n">only</span> <span class="n">to</span> <span class="n">hold</span> <span class="n">one</span> <span class="n">block</span> <span class="n">of</span> <span class="n">each</span> <span class="n">table</span><span class="p">,</span> <span class="n">the</span> <span class="n">estimated</span> <span class="n">cost</span> <span class="ow">is</span>
+<span class="n">nr</span> <span class="o">*</span> <span class="n">bs</span> <span class="o">+</span> <span class="n">br</span> <span class="p">(</span><span class="n">bt</span><span class="p">)</span>
+<span class="n">nr</span> <span class="o">+</span> <span class="n">br</span> <span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="o">---</span>
+<span class="n">br</span> <span class="o">*</span> <span class="n">bs</span> <span class="o">+</span> <span class="n">br</span> <span class="p">(</span><span class="n">bt</span><span class="p">)</span>
+<span class="mi">2</span><span class="n">br</span> <span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="query-optimisation">
+<h3>Query Optimisation<a class="headerlink" href="#query-optimisation" title="Permalink to this heading">#</a></h3>
+<p>Query Optimisation is about the right choices on a graph</p>
+</section>
+</section>
+<section id="id3">
+<h2>5<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<section id="cost-based-optimisation">
+<h3>Cost-based Optimisation<a class="headerlink" href="#cost-based-optimisation" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="sql-ra">
+<h3>SQL &amp; RA<a class="headerlink" href="#sql-ra" title="Permalink to this heading">#</a></h3>
+<p>Real life situation: Optimizers often use simple heuristics for very cheap queries, and perform exhaustive enumeration for more expensive queries</p>
+</section>
+<section id="indexing">
+<h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this heading">#</a></h3>
+<p>Indexing is important as it is “A key choice to make before optimization”</p>
+<ul class="simple">
+<li><p>Ordered indices</p></li>
+<li><p>Hash indices</p></li>
+<li><p>Primary index</p></li>
+<li><p>Secondary index</p></li>
+</ul>
+</section>
+<section id="b-trees">
+<h3>B+trees<a class="headerlink" href="#b-trees" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id4">
+<h2>6<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<section id="id5">
+<h3>B+trees<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="hash">
+<h3>Hash<a class="headerlink" href="#hash" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id6">
+<h2>7<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<section id="bitmap">
+<h3>Bitmap<a class="headerlink" href="#bitmap" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="quadtree">
+<h3>Quadtree<a class="headerlink" href="#quadtree" title="Permalink to this heading">#</a></h3>
+<p>NN</p>
+</section>
+<section id="k-d-tree">
+<h3>K-d Tree<a class="headerlink" href="#k-d-tree" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id7">
+<h2>8<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<section id="r-tree">
+<h3>R tree<a class="headerlink" href="#r-tree" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="transactions">
+<h3>Transactions<a class="headerlink" href="#transactions" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id8">
+<h2>9<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
+<section id="acid-in-transactions">
+<h3>ACID in Transactions<a class="headerlink" href="#acid-in-transactions" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="codes">
+<h3>Codes<a class="headerlink" href="#codes" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="error-handling">
+<h3>Error Handling<a class="headerlink" href="#error-handling" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id9">
+<h2>10<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<section id="jdbc-java-database-connectivity">
+<h3>JDBC: Java Database Connectivity<a class="headerlink" href="#jdbc-java-database-connectivity" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="flat-transactions">
+<h3>Flat Transactions<a class="headerlink" href="#flat-transactions" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Limitations: Any failure requires alot of unnecessary recomputation!!!</p></li>
+<li><p>Improvements: A savepoint is established by invoking the SAVE WORK function which causes the system to record the current state of processing.</p></li>
+</ul>
+</section>
+<section id="nested-transactions">
+<h3>Nested Transactions<a class="headerlink" href="#nested-transactions" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Rules: commit, roll back, visibility</p></li>
+</ul>
+</section>
+<section id="transaction-management-monitors">
+<h3>Transaction Management: Monitors<a class="headerlink" href="#transaction-management-monitors" title="Permalink to this heading">#</a></h3>
+<p>The main function of a Transaction Processing Monitor is to integrate system components and manage resources so that transactions can run:</p>
+<ol class="arabic simple">
+<li><p>TP monitors manage the transfer of data between clients and servers</p></li>
+<li><p>Breaks down applications or code into transactions and ensures that all the database(s) are updated properly</p></li>
+<li><p>It also takes appropriate actions if any error occurs</p></li>
+</ol>
+</section>
+<section id="tp-monitors">
+<h3>TP Monitors<a class="headerlink" href="#tp-monitors" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Terminal management</p></li>
+<li><p>Presentation service</p></li>
+<li><p>Context management</p></li>
+<li><p>Start/Restart</p></li>
+<li><p>Heterogeneity</p></li>
+<li><p>Control communications</p></li>
+</ul>
+</section>
+<section id="tp-process-structure-i-to-iii">
+<h3>TP Process Structure I to III<a class="headerlink" href="#tp-process-structure-i-to-iii" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="cc">
+<h2>11 - CC<a class="headerlink" href="#cc" title="Permalink to this heading">#</a></h2>
+<section id="concurrency-control">
+<h3>Concurrency Control<a class="headerlink" href="#concurrency-control" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Significance: Is needed to preserve consistency of the data for some number of tasks to work on the same data, i.e. concurrently.</p></li>
+<li><p>Examples:
+Dekker’s algorithm
+OS supported primitives
+Spin locks</p></li>
+</ul>
+</section>
+<section id="semaphores">
+<h3>Semaphores<a class="headerlink" href="#semaphores" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id10">
+<h2>12<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+<section id="id11">
+<h3>Semaphores<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="deadlock">
+<h3>Deadlock<a class="headerlink" href="#deadlock" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="isolation">
+<h3>Isolation<a class="headerlink" href="#isolation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Trade off between I &amp; C</p></li>
+</ul>
+</section>
+<section id="dependency">
+<h3>Dependency<a class="headerlink" href="#dependency" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id12">
+<h2>13<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
+<section id="dependency-graph">
+<h3>Dependency Graph<a class="headerlink" href="#dependency-graph" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Transaction Equivalence</p></li>
+<li><p>Dependency and Isolation</p></li>
+<li><p>Wormholes</p></li>
+</ul>
+</section>
+</section>
+<section id="id13">
+<h2>14<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
+<section id="s-and-x-lock">
+<h3>S and X lock<a class="headerlink" href="#s-and-x-lock" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="phase-locking-2pl">
+<h3>2 Phase Locking (2PL)<a class="headerlink" href="#phase-locking-2pl" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Serializability</p></li>
+</ul>
+</section>
+<section id="strict-two-phase-locking-s2pl">
+<h3>Strict two-phase locking (S2PL)<a class="headerlink" href="#strict-two-phase-locking-s2pl" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Efficiency concern</p></li>
+</ul>
+</section>
+<section id="degrees-of-isolation">
+<h3>Degrees of Isolation<a class="headerlink" href="#degrees-of-isolation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Degree 3 (most strict)</p></li>
+<li><p>Degree 2</p></li>
+<li><p>Degree 1</p></li>
+<li><p>Degree 0</p></li>
+</ul>
+<p>先看是不是well formed，再看是不是2 phase</p>
+</section>
+</section>
+<section id="id14">
+<h2>15<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
+<section id="id15">
+<h3>Degrees of Isolation<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="granularity-of-locks">
+<h3>Granularity of Locks<a class="headerlink" href="#granularity-of-locks" title="Permalink to this heading">#</a></h3>
+<figure class="align-default" id="lock">
+<a class="reference internal image-reference" href="_images/lock.png"><img alt="_images/lock.png" src="_images/lock.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">lock</span><a class="headerlink" href="#lock" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="two-version-locking">
+<h3>Two-version Locking<a class="headerlink" href="#two-version-locking" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="nested-transactions-and-locking">
+<h3>Nested Transactions and Locking<a class="headerlink" href="#nested-transactions-and-locking" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id16">
+<h2>16<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h2>
+<section id="optimistic-concurrency-control">
+<h3>Optimistic Concurrency Control<a class="headerlink" href="#optimistic-concurrency-control" title="Permalink to this heading">#</a></h3>
+<p>Use data without locks, but with validations</p>
+<ul class="simple">
+<li><p>backward validations</p></li>
+<li><p>forward validations</p></li>
+</ul>
+</section>
+<section id="snapshot-isolation">
+<h3>Snapshot Isolation<a class="headerlink" href="#snapshot-isolation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Not the same thing as serializability</p></li>
+<li><p>Checks if what needs to be written is changed</p></li>
+<li><p>If not it is allowed to commit</p></li>
+<li><p>Things read are not checked</p></li>
+</ul>
+</section>
+<section id="time-stamp-based-concurrency-control">
+<h3>Time-stamp-based Concurrency Control<a class="headerlink" href="#time-stamp-based-concurrency-control" title="Permalink to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Timestamp ordering assigns orders for transactions based on time of commencement</p>
+<p>Locking has some sort of order which is decided at object access time</p>
+<p>When there are many updates two-phase locking is good as it has less aborts</p>
+<p>Timestamp-based methods abort immediately which may be good some times</p>
+<p>If there aren’t many updates an optimistic approach is better</p>
+<p>… so there is no one winner for all DBMSs for all types of data/queries</p>
+</div>
+</section>
+<section id="networking-intro">
+<h3>Networking Intro<a class="headerlink" href="#networking-intro" title="Permalink to this heading">#</a></h3>
+<p>mechanism design</p>
+<ol class="arabic simple">
+<li><p>Either all of the servers commit the transaction</p></li>
+<li><p>Or all of them the transaction</p></li>
+</ol>
+<blockquote>
+<div><p>One of the servers becomes the coordinator. It must ensure the same outcome at all of the servers.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="id17">
+<h2>17 （学的不好<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h2>
+<section id="two-phase-commit">
+<h3>Two-phase commit<a class="headerlink" href="#two-phase-commit" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>phase 1 - each participant votes.</p></li>
+<li><p>phase 2 - the participants carry out the joint decision.</p></li>
+<li><p>voting phase</p></li>
+<li><p>completion phase</p></li>
+<li><p>participant and coordinator</p></li>
+<li><p>functions
+cancommit
+docommit
+doabort
+havecommitted
+getdecision</p></li>
+</ul>
+<figure class="align-default" id="pc">
+<a class="reference internal image-reference" href="_images/2pc.png"><img alt="_images/2pc.png" src="_images/2pc.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">2pc</span><a class="headerlink" href="#pc" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="error-handling-in-two-phase-commit">
+<h3>Error Handling in Two-phase commit<a class="headerlink" href="#error-handling-in-two-phase-commit" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>time-out actions in the 2PC is used</p></li>
+</ul>
+</section>
+<section id="timestamp">
+<h3>Timestamp<a class="headerlink" href="#timestamp" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="transactions-with-replicated-data">
+<h3>Transactions with replicated data<a class="headerlink" href="#transactions-with-replicated-data" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id18">
+<h2>18<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h2>
+<section id="fault-tolerance">
+<h3>Fault Tolerance<a class="headerlink" href="#fault-tolerance" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="disk-failure-rates">
+<h3>Disk failure rates<a class="headerlink" href="#disk-failure-rates" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Type of Error
+soft data
+seek
+maskable hard data
+un …
+repair</p></li>
+</ul>
+</section>
+<section id="raid">
+<h3>RAID<a class="headerlink" href="#raid" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>RAID0 to RIAD6</p></li>
+</ul>
+</section>
+<section id="fault-tolerance-by-voting">
+<h3>Fault tolerance by voting<a class="headerlink" href="#fault-tolerance-by-voting" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Availability</p>
+<ul>
+<li><p>Failvoting with 2 devices
+MTTF = 10/2 = 5 years (system fails with 1 device failure)</p></li>
+<li><p>Failvoting with 3 devices
+MTTF = 10/3 for the first failure + 10/2 for 2nd failure = 8.3 years.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="fault-tolerance-with-repair">
+<h3>Fault tolerance with repair<a class="headerlink" href="#fault-tolerance-with-repair" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Probability of a particular module is not available
+		 = MTTR/(MTTF+MTTR)   						
+         ≅ MTTR/MTTF   if MTTF &gt;&gt; MTTR
+
+</pre></div>
+</div>
+</section>
+<section id="supermodule">
+<h3>Supermodule<a class="headerlink" href="#supermodule" title="Permalink to this heading">#</a></h3>
+<p>In general, a system with multiple hard disk drives is expected to function with only one working disk</p>
+<div class="math notranslate nohighlight">
+\[
+P = frac{1}{MTTF}
+\]</div>
+</section>
+</section>
+<section id="id19">
+<h2>19<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h2>
+<section id="recovery">
+<h3>Recovery<a class="headerlink" href="#recovery" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="data-storage">
+<h3>Data Storage<a class="headerlink" href="#data-storage" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Volatile storage</p></li>
+<li><p>Nonvolatile storage</p></li>
+<li><p>Stable storage</p></li>
+</ul>
+</section>
+<section id="buffers">
+<h3>Buffers<a class="headerlink" href="#buffers" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Physical blocks</p></li>
+<li><p>Buffer blocks</p></li>
+</ul>
+</section>
+<section id="data-access">
+<h3>Data Access<a class="headerlink" href="#data-access" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="cyclic-redundancy-check-crc">
+<h3>Cyclic Redundancy Check (CRC)<a class="headerlink" href="#cyclic-redundancy-check-crc" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="types-of-recovery-systems">
+<h3>Types of Recovery Systems<a class="headerlink" href="#types-of-recovery-systems" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>log-based recovery</p>
+<ol class="arabic simple">
+<li><p>Deferred database modification</p></li>
+<li><p>Immediate database modification</p></li>
+</ol>
+</li>
+<li><p>shadow-paging</p></li>
+</ul>
+</section>
+<section id="checkpoints">
+<h3>Checkpoints<a class="headerlink" href="#checkpoints" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id20">
+<h2>20 （之后学的也不好<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h2>
+<section id="id21">
+<h3>Checkpoints<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="concurrent-transactions">
+<h3>Concurrent Transactions<a class="headerlink" href="#concurrent-transactions" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="log-record-buffering">
+<h3>Log Record Buffering<a class="headerlink" href="#log-record-buffering" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="remote-backup-systems">
+<h3>Remote Backup Systems<a class="headerlink" href="#remote-backup-systems" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="shadow-paging">
+<h3>Shadow-paging<a class="headerlink" href="#shadow-paging" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id22">
+<h2>21<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h2>
+<section id="data-warehousing">
+<h3>Data Warehousing<a class="headerlink" href="#data-warehousing" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="olap-online-analytical-processing">
+<h3>OLAP（OnLine Analytical Processing）<a class="headerlink" href="#olap-online-analytical-processing" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="data-cube">
+<h3>Data Cube<a class="headerlink" href="#data-cube" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="cross-tabulation-with-hierarchy">
+<h3>Cross Tabulation with Hierarchy<a class="headerlink" href="#cross-tabulation-with-hierarchy" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="information-retrieval-systems">
+<h3>Information Retrieval Systems<a class="headerlink" href="#information-retrieval-systems" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="in-memory-databases">
+<h3>In Memory Databases<a class="headerlink" href="#in-memory-databases" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="id23">
+<h2>22<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h2>
+<section id="graph-databases">
+<h3>Graph Databases<a class="headerlink" href="#graph-databases" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="columnar-databases">
+<h3>Columnar Databases<a class="headerlink" href="#columnar-databases" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="limitation-of-classical-commercial-systems-in-the-era-of-networking">
+<h3>Limitation of Classical Commercial Systems in the era of Networking<a class="headerlink" href="#limitation-of-classical-commercial-systems-in-the-era-of-networking" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="cap">
+<h3>CAP<a class="headerlink" href="#cap" title="Permalink to this heading">#</a></h3>
+<p>Any distributed database with shared data, can have at most two of the three desirable properties, C, A or P</p>
+</section>
+<section id="eventual-consistency-variations">
+<h3>Eventual Consistency Variations<a class="headerlink" href="#eventual-consistency-variations" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="base">
+<h3>BASE<a class="headerlink" href="#base" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to COMP90050</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tutorials.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tutorial Key Points</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#storage-area-networks-san">Storage Area Networks (SAN)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#communication-cost">Communication Cost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-dbms-types">Key DBMS Types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acid">ACID</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#significance-of-dbms">Significance of DBMS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#module-availability">Module availability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-oriented-db-systems-oodb">Object Oriented DB Systems(OODB)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nosql">NoSQL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deductive-database-systems-ddbs">Deductive database systems (DDBS)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#database-architectures">Database Architectures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance">Performance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joins-simple-nested">Joins (simple, nested)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-optimisation">Query Optimisation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-based-optimisation">Cost-based Optimisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-ra">SQL &amp; RA</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing">Indexing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-trees">B+trees</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">6</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">B+trees</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hash">Hash</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bitmap">Bitmap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quadtree">Quadtree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-d-tree">K-d Tree</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">8</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-tree">R tree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transactions">Transactions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acid-in-transactions">ACID in Transactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codes">Codes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">Error Handling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jdbc-java-database-connectivity">JDBC: Java Database Connectivity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flat-transactions">Flat Transactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-transactions">Nested Transactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transaction-management-monitors">Transaction Management: Monitors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tp-monitors">TP Monitors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tp-process-structure-i-to-iii">TP Process Structure I to III</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cc">11 - CC</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concurrency-control">Concurrency Control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semaphores">Semaphores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">12</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Semaphores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deadlock">Deadlock</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isolation">Isolation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependency">Dependency</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">13</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependency-graph">Dependency Graph</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">14</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#s-and-x-lock">S and X lock</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-locking-2pl">2 Phase Locking (2PL)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strict-two-phase-locking-s2pl">Strict two-phase locking (S2PL)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#degrees-of-isolation">Degrees of Isolation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">15</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Degrees of Isolation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#granularity-of-locks">Granularity of Locks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-version-locking">Two-version Locking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-transactions-and-locking">Nested Transactions and Locking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">16</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optimistic-concurrency-control">Optimistic Concurrency Control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#snapshot-isolation">Snapshot Isolation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-stamp-based-concurrency-control">Time-stamp-based Concurrency Control</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#networking-intro">Networking Intro</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">17 （学的不好</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-phase-commit">Two-phase commit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling-in-two-phase-commit">Error Handling in Two-phase commit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timestamp">Timestamp</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transactions-with-replicated-data">Transactions with replicated data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">18</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fault-tolerance">Fault Tolerance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disk-failure-rates">Disk failure rates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raid">RAID</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fault-tolerance-by-voting">Fault tolerance by voting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fault-tolerance-with-repair">Fault tolerance with repair</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supermodule">Supermodule</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">19</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recovery">Recovery</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-storage">Data Storage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buffers">Buffers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-access">Data Access</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cyclic-redundancy-check-crc">Cyclic Redundancy Check (CRC)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-recovery-systems">Types of Recovery Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checkpoints">Checkpoints</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">20 （之后学的也不好</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Checkpoints</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concurrent-transactions">Concurrent Transactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-record-buffering">Log Record Buffering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-backup-systems">Remote Backup Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shadow-paging">Shadow-paging</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">21</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-warehousing">Data Warehousing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#olap-online-analytical-processing">OLAP（OnLine Analytical Processing）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cube">Data Cube</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-tabulation-with-hierarchy">Cross Tabulation with Hierarchy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#information-retrieval-systems">Information Retrieval Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-memory-databases">In Memory Databases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">22</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graph-databases">Graph Databases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#columnar-databases">Columnar Databases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitation-of-classical-commercial-systems-in-the-era-of-networking">Limitation of Classical Commercial Systems in the era of Networking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cap">CAP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eventual-consistency-variations">Eventual Consistency Variations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base">BASE</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

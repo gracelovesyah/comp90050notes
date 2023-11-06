@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>Formula Sheet &#8212; My sample book</title>
   
   
   
@@ -61,9 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'README';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'formular';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial Key Points" href="tutorials.html" />
+    <link rel="prev" title="Lecture Notes" href="lec.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,9 +158,9 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lec.html">Lecture Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="formular.html">Formula Sheet</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Formula Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorial Key Points</a></li>
 <li class="toctree-l1"><a class="reference internal" href="past_exam.html">Past Exam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="comparisons.html">Comparisons</a></li>
@@ -234,7 +238,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fformular.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -264,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/README.md" target="_blank"
+      <li><a href="_sources/formular.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,7 +350,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Formula Sheet</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -355,9 +359,21 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication-cost">Communication Cost</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#joins-and-query-cost">Joins and Query Cost</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concurrency-control">Concurrency Control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-phase-locking-2pl">Two-Phase Locking (2PL)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timestamp-ordering">Timestamp Ordering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-phase-commit-2pc">Two-Phase Commit (2PC)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raid-levels">RAID Levels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recovery">Recovery</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acid-properties">ACID Properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#locks">Locks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isolation-levels">Isolation Levels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fault-tolerance">Fault Tolerance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cap-theorem">CAP Theorem</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -368,8 +384,108 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>preview
-shift + command + V</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="formula-sheet">
+<h1>Formula Sheet<a class="headerlink" href="#formula-sheet" title="Permalink to this heading">#</a></h1>
+<section id="communication-cost">
+<h2>Communication Cost<a class="headerlink" href="#communication-cost" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Transmit Time</strong>: <span class="math notranslate nohighlight">\( \text{time} = \frac{\text{distance}}{c} + \frac{\text{message size (bits)}}{\text{bandwidth}} \)</span></p></li>
+<li><p><strong>Speed of Light</strong>: <span class="math notranslate nohighlight">\( c = 200 \times 10^6 \)</span> meters/second (in fiber optics)</p></li>
+</ul>
+</section>
+<section id="joins-and-query-cost">
+<h2>Joins and Query Cost<a class="headerlink" href="#joins-and-query-cost" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Simple Join Cost</strong>: <span class="math notranslate nohighlight">\( \text{cost} = n_r \times b_s + b_r \times (b_t) \)</span></p></li>
+<li><p><strong>Nested Loop Join Cost</strong>: <span class="math notranslate nohighlight">\( \text{cost} = b_r \times b_s + b_r \times (b_t) \)</span></p></li>
+<li><p><strong>Block Nested Loop Join Cost</strong>: <span class="math notranslate nohighlight">\( \text{cost} = 2 \times b_r \times (s) \)</span></p></li>
+</ul>
+</section>
+<section id="concurrency-control">
+<h2>Concurrency Control<a class="headerlink" href="#concurrency-control" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Dekker’s Algorithm</strong>: Used to ensure mutual exclusion in concurrent programming.</p></li>
+<li><p><strong>Spin Locks</strong>: A lock that causes a thread trying to acquire it to simply wait in a loop (“spin”) while repeatedly checking if the lock is available.</p></li>
+</ul>
+</section>
+<section id="two-phase-locking-2pl">
+<h2>Two-Phase Locking (2PL)<a class="headerlink" href="#two-phase-locking-2pl" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Growing Phase</strong>: Transaction may acquire locks.</p></li>
+<li><p><strong>Shrinking Phase</strong>: Transaction may release locks but cannot acquire any new ones.</p></li>
+</ul>
+</section>
+<section id="timestamp-ordering">
+<h2>Timestamp Ordering<a class="headerlink" href="#timestamp-ordering" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Rule</strong>: If a transaction <span class="math notranslate nohighlight">\( T_i \)</span> wants to read (or write) an object, and <span class="math notranslate nohighlight">\( T_j \)</span> has written (or read) that object with a later timestamp, <span class="math notranslate nohighlight">\( T_i \)</span> must wait or be rolled back.</p></li>
+</ul>
+</section>
+<section id="two-phase-commit-2pc">
+<h2>Two-Phase Commit (2PC)<a class="headerlink" href="#two-phase-commit-2pc" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Phase 1 (Voting Phase)</strong>: Participants vote to commit or abort.</p></li>
+<li><p><strong>Phase 2 (Completion Phase)</strong>: Based on voting, the transaction is either committed or aborted across all participants.</p></li>
+</ul>
+</section>
+<section id="raid-levels">
+<h2>RAID Levels<a class="headerlink" href="#raid-levels" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>RAID 0</strong>: Striping without redundancy.</p></li>
+<li><p><strong>RAID 1</strong>: Mirroring.</p></li>
+<li><p><strong>RAID 5</strong>: Striping with parity.</p></li>
+<li><p><strong>RAID 6</strong>: Striping with double parity.</p></li>
+</ul>
+</section>
+<section id="recovery">
+<h2>Recovery<a class="headerlink" href="#recovery" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Log-based Recovery</strong>: Uses a log to record the sequence of actions.</p></li>
+<li><p><strong>Checkpointing</strong>: Technique to minimize the work needed to recover from a crash.</p></li>
+</ul>
+</section>
+<section id="acid-properties">
+<h2>ACID Properties<a class="headerlink" href="#acid-properties" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Atomicity</strong>: Transactions are all-or-nothing.</p></li>
+<li><p><strong>Consistency</strong>: Transactions transform the database from one valid state to another.</p></li>
+<li><p><strong>Isolation</strong>: Transactions execute as if they are the only ones in the system.</p></li>
+<li><p><strong>Durability</strong>: Once a transaction has been committed, it will remain so.</p></li>
+</ul>
+</section>
+<section id="locks">
+<h2>Locks<a class="headerlink" href="#locks" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Shared (S) Lock</strong>: Allows concurrent transactions to read a database object.</p></li>
+<li><p><strong>Exclusive (X) Lock</strong>: Allows a transaction to read and write a database object.</p></li>
+</ul>
+</section>
+<section id="isolation-levels">
+<h2>Isolation Levels<a class="headerlink" href="#isolation-levels" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Read Uncommitted</strong>: Lowest level, transactions may read changes made by others before they commit.</p></li>
+<li><p><strong>Read Committed</strong>: Transactions cannot read changes made by others until they commit.</p></li>
+<li><p><strong>Repeatable Read</strong>: Ensures repeatable reads but may not prevent phantom reads.</p></li>
+<li><p><strong>Serializable</strong>: Highest level, transactions are completely isolated from one another.</p></li>
+</ul>
+</section>
+<section id="fault-tolerance">
+<h2>Fault Tolerance<a class="headerlink" href="#fault-tolerance" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Mean Time To Failure (MTTF)</strong>: Average time to failure for a system.</p></li>
+<li><p><strong>Mean Time To Repair (MTTR)</strong>: Average time to repair a system.</p></li>
+<li><p><strong>Availability</strong>: <span class="math notranslate nohighlight">\( \text{Availability} = \frac{\text{MTTF}}{\text{MTTF} + \text{MTTR}} \)</span></p></li>
+</ul>
+</section>
+<section id="cap-theorem">
+<h2>CAP Theorem<a class="headerlink" href="#cap-theorem" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Consistency</strong>: Every read receives the most recent write or an error.</p></li>
+<li><p><strong>Availability</strong>: Every request receives a (non-error) response, without guaranteeing that it contains the most recent write.</p></li>
+<li><p><strong>Partition Tolerance</strong>: The system continues to operate despite an arbitrary number of messages being dropped or delayed by the network between nodes.</p></li>
+</ul>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -402,6 +518,24 @@ shift + command + V</p>
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="lec.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture Notes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tutorials.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tutorial Key Points</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -419,9 +553,21 @@ shift + command + V</p>
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication-cost">Communication Cost</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#joins-and-query-cost">Joins and Query Cost</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concurrency-control">Concurrency Control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-phase-locking-2pl">Two-Phase Locking (2PL)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timestamp-ordering">Timestamp Ordering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-phase-commit-2pc">Two-Phase Commit (2PC)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raid-levels">RAID Levels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recovery">Recovery</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acid-properties">ACID Properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#locks">Locks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isolation-levels">Isolation Levels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fault-tolerance">Fault Tolerance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cap-theorem">CAP Theorem</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

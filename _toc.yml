@@ -4,7 +4,9 @@
 format: jb-book
 root: intro
 chapters:
+
 - file: lec
+- file: formular
 - file: tutorials
 - file: past_exam
 - file: comparisons

@@ -1,269 +1,252 @@
-# Lectures
-## 3
+
+# Lecture Notes
+
+## Lecture 3: Database Management Systems
+
 ### Storage Area Networks (SAN)
-### Communication Cost
-```
-transmit time = distance/c + message_bits/bandwidth
-c = speed of light (200 million meters/sec) with fibre optics
-```
+- SANs are dedicated high-speed networks that provide access to consolidated block-level storage, primarily used to enhance storage devices, such as disk arrays and tape libraries, accessible to servers.
+
+### Communication Costs
+- Communication cost in a network can be calculated using the formula:
+
+  $$
+  \text{transmit time} = \frac{\text{distance}}{c} + \frac{\text{message bits}}{\text{bandwidth}}
+  $$
+  
+  where $ c $ is the speed of light in fiber optics, approximately $ 200 $ million meters per second.
+
 ### Key DBMS Types
-### ACID
+- Discusses various types of DBMS, including relational, object-oriented, and NoSQL databases.
+
+### ACID Properties
+- Stands for Atomicity, Consistency, Isolation, and Durability, fundamental properties to ensure reliable transaction processing.
+
 ### Significance of DBMS
-### Module availability
-### Object Oriented DB Systems(OODB) 
+- Covers the importance of DBMS in ensuring data integrity, security, and efficient access.
+
+### Module Availability
+- The accessibility of various DBMS modules that can be integrated into different applications.
+
+### Object-Oriented DB Systems (OODB)
+- Databases that integrate object-oriented programming principles, allowing objects to be stored and retrieved.
+
 ### NoSQL
-### Deductive database systems (DDBS)
+- Explores NoSQL databases, which provide a mechanism for storage and retrieval of data modeled in means other than the tabular relations used in relational databases.
 
-## 4
+### Deductive Database Systems (DDBS)
+- These are databases that provide deductive capabilities, allowing for complex queries based on inference rules.
+
+## Lecture 4: Database Architectures and Performance
+
 ### Database Architectures
-- centralised
-- distributed
-- www
-- grid
-- p2p
-- cloud
+- Centralized
+- Distributed
+- WWW (World Wide Web)
+- Grid
+- Peer-to-peer (P2P)
+- Cloud
 
-### Performance
-### Joins (simple, nested)
-```
-In the worst case, if there is enough memory only to hold one block of each table, the estimated cost is
-nr * bs + br (bt)
-nr + br (s)
----
-br * bs + br (bt)
-2br (s)
-```
-### Query Optimisation
-Query Optimisation is about the right choices on a graph
+### Performance Measures
+- Discusses the factors affecting database performance, including response time, throughput, and efficiency of query processing.
 
-## 5
-### Cost-based Optimisation
-### SQL & RA
-Real life situation: Optimizers often use simple heuristics for very cheap queries, and perform exhaustive enumeration for more expensive queries
+### Joins
+- Simple and nested joins are explored with a focus on understanding the cost associated with different join strategies.
+
+### Query Optimization
+- The process of selecting the most efficient means of executing a SQL statement.
+
+## Lecture 5: Optimization and Indexing
+
+### Cost-based Optimization
+- The process by which a DBMS query optimizer selects the most cost-effective means of executing a query.
+
+### SQL & Relational Algebra (RA)
+- Demonstrates how query optimizers use both SQL and relational algebra to formulate efficient query execution plans.
+
 ### Indexing
-Indexing is important as it is "A key choice to make before optimization"
-- Ordered indices
-- Hash indices
-- Primary index
-- Secondary index
-### B+trees
-## 6
-### B+trees
-### Hash 
+- Discusses the importance of indexing in databases and its role in optimization, touching on ordered indices, hash indices, primary indices, and secondary indices.
 
-## 7
-### Bitmap
-### Quadtree
-NN 
-### K-d Tree
-## 8
-### R tree
+### B+ Trees
+- An extension of the B-tree data structure that allows for efficient insertion, deletion, and search operations.
+
+## Lecture 6: Advanced Data Structures
+
+### B+ Trees
+- Further exploration of B+ trees in the context of database indexing.
+
+### Hashing
+- The application of hash functions in databases, particularly for building fast retrieval data structures.
+
+## Lecture 7: Specialized Indexing and Data Structures
+
+### Bitmap Indexes
+- Indexing technique used to improve the performance of queries on databases with low cardinality columns.
+
+### Quadtrees and k-d Trees
+- Spatial indexing methods that are efficient for querying multi-dimensional data.
+
+## Lecture 8: Spatial Indexing and Transactions
+
+### R-trees
+- A tree data structure used for indexing spatial information, such as geographical coordinates, rectangles, and polygons.
+
 ### Transactions
-## 9
+- Introduces the concept of transactions in databases and their properties.
+
+## Lecture 9: Transaction Properties and Error Handling
+
 ### ACID in Transactions
-### Codes
+- A deeper look into the enforcement and significance of ACID properties in transaction processing.
+
 ### Error Handling
-## 10
-### JDBC: Java Database Connectivity
-### Flat Transactions
-- Limitations: Any failure requires alot of unnecessary recomputation!!!
-- Improvements: A savepoint is established by invoking the SAVE WORK function which causes the system to record the current state of processing.
-### Nested Transactions
-- Rules: commit, roll back, visibility
+- Discusses strategies for handling errors in transaction processing to maintain data integrity.
+
+## Lecture 10: Transaction Management and Java Database Connectivity (JDBC)
+
+### JDBC
+- An API for the Java programming language that defines how a client may access a database.
+
+### Flat and Nested Transactions
+- Explores the limitations of flat transactions and the rules and improvements introduced with nested transactions.
+
 ### Transaction Management: Monitors
-The main function of a Transaction Processing Monitor is to integrate system components and manage resources so that transactions can run:
+- Details the function of Transaction Processing Monitors in managing data transfers and ensuring the consistency of transactions.
 
-1. TP monitors manage the transfer of data between clients and servers
+## Lecture 11: Concurrency Control
 
-2. Breaks down applications or code into transactions and ensures that all the database(s) are updated properly
-
-3. It also takes appropriate actions if any error occurs
-
-### TP Monitors
-- Terminal management
-- Presentation service
-- Context management
-- Start/Restart
-- Heterogeneity
-- Control communications
-
-### TP Process Structure I to III
-## 11 - CC
 ### Concurrency Control
-- Significance: Is needed to preserve consistency of the data for some number of tasks to work on the same data, i.e. concurrently. 
-- Examples:
-    Dekker's algorithm 
-    OS supported primitives 
-    Spin locks
-### Semaphores 
-## 12
-### Semaphores 
-### Deadlock
-### Isolation
-- Trade off between I & C
-### Dependency
-## 13
+- Discusses mechanisms like Dekker's algorithm, OS-supported primitives, and spin locks to manage concurrent access to data.
+
+### Semaphores
+- Introduces semaphores as a concurrency control technique to manage access to common resources by multiple processes in a concurrent system.
+
+## Lecture 12: Deadlocks and Dependencies
+
+### Deadlocks
+- A condition where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process.
+
+### Isolation Levels
+- Trade-offs between
+
+ isolation and concurrency control; how different levels of isolation impact the performance and integrity of transactions.
+
+### Dependency Resolution
+- Techniques to resolve dependencies among transactions to ensure consistency and avoid deadlocks.
+
+## Lecture 13: Dependency Graphs and Isolation
+
 ### Dependency Graph
-- Transaction Equivalence
-- Dependency and Isolation
-- Wormholes
+- Visualizes dependencies among transactions to help in deadlock detection and resolution.
 
-## 14
-### S and X lock
-### 2 Phase Locking (2PL)
-- Serializability
-### Strict two-phase locking (S2PL)
-- Efficiency concern
+### Isolation Techniques
+- Discusses wormholes as a potential pitfall in transaction processing that can lead to isolation issues.
+
+## Lecture 14: Locking Mechanisms and Isolation Levels
+
+### Shared (S) and Exclusive (X) Locks
+- The basics of locking mechanisms used to ensure data integrity in concurrent transaction processing.
+
+### Two-Phase Locking (2PL)
+- A concurrency control method that ensures serializability by obtaining all the locks before releasing any lock.
+
+### Strict Two-Phase Locking (S2PL)
+- An enhancement of 2PL that further restricts the timing of lock release to ensure recoverability of transactions.
+
 ### Degrees of Isolation
-- Degree 3 (most strict)
-- Degree 2
-- Degree 1
-- Degree 0 
+- The different degrees of isolation provide a spectrum of guarantees regarding the visibility of changes made by concurrent transactions.
 
-先看是不是well formed，再看是不是2 phase
+## Lecture 15: Lock Granularity and Concurrency Control
 
-## 15
-### Degrees of Isolation
 ### Granularity of Locks
-```{figure} ./images/lock.png
----
-height: 300px
-name: lock
----
-lock
-```
-### Two-version Locking
-### Nested Transactions and Locking
+- Discusses the size of the data on which a lock is applied, from individual fields to entire databases.
 
-## 16
+### Two-Version Locking
+- A concurrency control mechanism that maintains two versions of a database object to allow readers to access the database concurrently with a writer.
+
+### Nested Transactions and Locking
+- A transaction structure that allows a transaction to contain sub-transactions, which can be independently committed or rolled back.
+
+## Lecture 16: Optimistic Concurrency Control and Timestamping
 
 ### Optimistic Concurrency Control
-Use data without locks, but with validations
-- backward validations
-- forward validations
+- A method that allows transactions to proceed without locking, but requires validation before committing.
+
 ### Snapshot Isolation
-- Not the same thing as serializability
-- Checks if what needs to be written is changed
-- If not it is allowed to commit
-- Things read are not checked
+- A concurrency control method that provides a transaction with a consistent snapshot of the database at a point in time.
+
 ### Time-stamp-based Concurrency Control
-```{note}
-Timestamp ordering assigns orders for transactions based on time of commencement
+- Ensures that transactions are serialized based on their timestamp order.
 
-Locking has some sort of order which is decided at object access time
+### Networking and Transactions
+- Discusses the design mechanisms involved in ensuring consistency across distributed systems through transaction management.
 
-When there are many updates two-phase locking is good as it has less aborts
+## Lecture 17: Two-Phase Commit Protocol
 
-Timestamp-based methods abort immediately which may be good some times
+### Two-Phase Commit (2PC)
+- An atomic commitment protocol that ensures all participants in a distributed transaction either commit or roll back changes.
 
-If there aren’t many updates an optimistic approach is better
+### Error Handling in Two-Phase Commit
+- Addresses the actions taken during timeouts and other errors in the 2PC protocol to ensure transaction consistency.
 
-… so there is no one winner for all DBMSs for all types of data/queries
-```
+## Lecture 18: Fault Tolerance and RAID
 
-### Networking Intro
-mechanism design
-1. Either all of the servers commit the transaction
-2. Or all of them the transaction
+### Fault Tolerance Techniques
+- Discusses various methods to make a system robust against faults, such as disk failures and data corruption.
 
-> One of the servers becomes the coordinator. It must ensure the same outcome at all of the servers.
+### RAID Levels
+- Explores the different configurations of Redundant Array of Independent Disks (RAID) to achieve fault tolerance.
 
+### Fault Tolerance by Voting and Repair
+- Introduces techniques such as voting and system repair to enhance the reliability and availability of a system.
 
-## 17 （学的不好
-### Two-phase commit
-- phase 1 - each participant votes. 
-- phase 2 - the participants carry out the joint decision.
-- voting phase
-- completion phase
-- participant and coordinator
-- functions
-    cancommit
-    docommit
-    doabort
-    havecommitted
-    getdecision
-```{figure} ./images/2pc.png
----
-height: 300px
-name: 2pc
----
-2pc
-```
-### Error Handling in Two-phase commit
-- time-out actions in the 2PC is used
-### Timestamp 
-### Transactions with replicated data
+## Lecture 19: Recovery Mechanisms
 
-## 18
-### Fault Tolerance
-### Disk failure rates
-- Type of Error
-    soft data
-    seek
-     maskable hard data
-     un ...
-     repair
-### RAID
-- RAID0 to RIAD6
-###  Fault tolerance by voting
-- Availability
-    - Failvoting with 2 devices
-            MTTF = 10/2 = 5 years (system fails with 1 device failure)
+### Recovery Methods
+- Discusses strategies for recovering from hardware or software failures to ensure the persistence and consistency of data.
 
-    - Failvoting with 3 devices
-            MTTF = 10/3 for the first failure + 10/2 for 2nd failure = 8.3 years.
-### Fault tolerance with repair
-```
-Probability of a particular module is not available
-		 = MTTR/(MTTF+MTTR)   						
-         ≅ MTTR/MTTF   if MTTF >> MTTR
+### Data Storage Hierarchy
+- The hierarchy of storage solutions, from volatile memory to stable, non-volatile storage.
 
-```
-### Supermodule
-In general, a system with multiple hard disk drives is expected to function with only one working disk
+### Checkpoints in Recovery
+- The use of checkpoints to minimize the amount of work needed to recover from a crash.
 
-$$
-P = frac{1}{MTTF}
-$$
+## Lecture 20: Transaction Logging and Remote Backup
 
-## 19
-### Recovery
-### Data Storage
-- Volatile storage
-- Nonvolatile storage
-- Stable storage
-### Buffers
-- Physical blocks 
-- Buffer blocks 
-### Data Access
-### Cyclic Redundancy Check (CRC)
-### Types of Recovery Systems
-- log-based recovery
-    1. Deferred database modification
-    2. Immediate database modification
-- shadow-paging
-### Checkpoints
-
-## 20 （之后学的也不好
-### Checkpoints
-### Concurrent Transactions
 ### Log Record Buffering
-### Remote Backup Systems 
+- The use of logs to record database transactions and ensure durability.
+
+### Remote Backup Systems
+- Discusses the importance and implementation of remote backup systems to prevent data loss.
+
 ### Shadow-paging
+- A technique used in recovery systems that involves maintaining a shadow copy of the entire database.
 
-## 21
+## Lecture 21: Data Warehousing and OLAP
+
 ### Data Warehousing
-### OLAP（OnLine Analytical Processing）
-### Data Cube
-### Cross Tabulation with Hierarchy
-### Information Retrieval Systems
-### In Memory Databases
+- A system used for reporting and data analysis, considered a core component of business intelligence.
 
-## 22
-### Graph Databases
-### Columnar Databases
-### Limitation of Classical Commercial Systems in the era of Networking
-### CAP
-Any distributed database with shared data, can have at most two of the three desirable properties, C, A or P
-### Eventual Consistency Variations
-### BASE
+### OLAP
+- Techniques for analyzing data from multiple database systems at the same time.
+
+### Data Cube and Cross Tabulation
+- Tools for summarizing and analyzing data along multiple dimensions, hierarchies, and facets.
+
+### In-Memory Databases
+- Databases that primarily rely on main memory for computer data storage, providing faster response times for queries.
+
+## Lecture 22: Modern Database Technologies
+
+### Graph and Columnar Databases
+- Introduces specialized databases designed for handling specific types of data and queries efficiently.
+
+### Limitations of Classical DBMS in Networking
+- The challenges traditional databases face in the context of modern networked environments.
+
+### CAP Theorem
+- The theorem stating that a distributed data store cannot simultaneously guarantee Consistency, Availability, and Partition tolerance.
+
+### Eventual Consistency and BASE
+- Discusses the principles of eventually consistent systems and the BASE acronym, which stands for Basically Available, Soft state, and Eventually consistent.
+
+This detailed outline should provide a comprehensive guide through the topics covered in the lectures, with added explanations and context to aid understanding.
